@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
         allclear.setOnClickListener(){
             viewModelCalculator.setValue(null,false)
             values.text = viewModelCalculator.getValue()
-//            values.text = ""
 
             viewModelCalculator.setResult(null)
             result.text =   viewModelCalculator.getResult()
@@ -75,13 +74,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-//    override fun onAttachedToWindow() {
-//        super.onAttachedToWindow()
-//        viewModelCalculator = ViewModelProviders.of(this).get(MyViewModelCalci::class.java)
-//    }
-
     fun appendValues(value: String, check: Boolean ) {
-//        viewModelCalculator = ViewModelProviders.of(this).get(MyViewModelCalci::class.java)
         if (result.text=="Error"){
             viewModelCalculator.setValue(null, false)
             values.text = viewModelCalculator.getValue()
@@ -109,8 +102,6 @@ class MainActivity : AppCompatActivity() {
             viewModelCalculator.setValue(result.text.toString(),false)
             viewModelCalculator.setValue(value,false)
             values.text = viewModelCalculator.getValue()
-//            values.append(result.text)
-//            values.append(value)
             viewModelCalculator.setResult(null)
             result.text =   viewModelCalculator.getResult()
         }
